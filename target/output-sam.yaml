@@ -1,0 +1,26 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: LTC microservice with AWS Lambda.
+Resources:
+  LambdaSpringBootFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: com.nab.ltc.lambda.LtcLambdaHandler::handleRequest
+      Runtime: java8
+      CodeUri: s3://ltc-aws-lambda-service-0502/071a392d6d497599b51434411810b94b
+      MemorySize: 1512
+      Policies: AWSLambdaBasicExecutionRole
+      Timeout: 60
+      Events:
+        GetResource:
+          Type: Api
+          Properties:
+            Path: /{proxy+}
+            Method: any
+Outputs:
+  LambdaSpringBootApi:
+    Description: URL for application
+    Value:
+      Fn::Sub: https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/ltc
+    Export:
+      Name: LambdaSpringBootApi

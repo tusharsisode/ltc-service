@@ -1,0 +1,5 @@
+com\nab\ltc\lambda\repository\LTCRepositoryTests.class
+com\nab\ltc\lambda\LtcApplicationTests.class
+com\nab\ltc\lambda\service\LTCServiceTests.class
+com\nab\ltc\lambda\controller\LTCControllerTests.class
+com\nab\ltc\lambda\service\LTCServiceTests$LTCServiceTestContextConfiguration.class
