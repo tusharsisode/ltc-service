@@ -1,6 +1,10 @@
 # LTC Serverless MicroService with AWS Lambda and AWS API Gateway
 
-This is a serverless microservice built using Spring Boot and configured to run on AWS Lambda with the help of AWS SAM (Serverless Application Model) and AWS Cloudformation. The API reads the backend application data directly from resources/json/ltc.json file, however the architecture is easily modifiable to plug with backend MongoDB. For testing purposes, steps are also given to install and run this application locally, or as a container on docker.
+This is LTC Micro-Service which has been built as a serverless API using Spring Boot and configured to run on AWS Lambda with the help of AWS SAM (Serverless Application Model) and AWS Cloudformation. This service is used for fetching LTC profit details for a given date. The API reads the backend application data directly from resources/json/ltc.json file, however the architecture is easily modifiable to plug with backend MongoDB as well. For testing purposes, steps are also given to install and run this application locally, or as a container on docker.
+
+For directly accessing and testing the service that is deployed on AWS Lambda, please use below link. The backend json file resources/json/ltc.json contains the data for three dates viz. 07-May-2019, 08-May-2019 and 09-May-2019. More data can be added to this json file for testing purposes. Please modify input date paramter (MM/DD/YYYY) accordingly in the below URL to see the results.
+
+https://d43p353ph8.execute-api.us-west-2.amazonaws.com/Prod/ltc?inputDate=05/09/2019
 
 # Deploy to AWS Lambda
 
